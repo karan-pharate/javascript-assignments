@@ -4,6 +4,7 @@ y = 6;
 z = x + y;
 carName = "Mushtang";
 x += y;
+
 document.getElementById('demo1').innerHTML =
  "The value of z is " + z + "." ;
  document.getElementById('demo2').innerHTML =
@@ -12,3 +13,7 @@ document.getElementById('demo1').innerHTML =
  carName;
  document.getElementById('demo4').innerHTML =
  x;
+ document.getElementById('demo5').innerHTML =
+ x + carName;
+ document.getElementById("demo6").innerHTML =
+ (x == y) + "<br>" + (x == z);
