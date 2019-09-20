@@ -27,6 +27,32 @@ document.getElementById("demo7").innerHTML =
   "<br>" +
   "5" / "2" +
   "<br>";
+  {  /* Original code */
+    console.log(i);  // undefined
+    var i = 10
+    console.log(i);  // 10
+  }
+  try {
+
+  {  /* Compilation phase */
+    var i;
+    console.log(i);  // undefined
+    i = 10
+    console.log(i);  // 10
+  }
+  // ES6 let & const
+  {
+    console.log(i);  // ReferenceError: i is not defined
+    const i = 10
+    console.log(i);  // 10
+  }
+  {
+    console.log(i);  // ReferenceError: i is not defined
+    let i = 10
+    console.log(i);  // 10
+  }
+}
+finally {
   let g1 = 'global 1'
   let g2 = 'global 2'
   {   /* Creating a new block scope */
@@ -39,3 +65,5 @@ document.getElementById("demo7").innerHTML =
   }
   console.log(g1)    // 'new global 1'
   console.log(g2)    // 'global 2'
+}
+  
