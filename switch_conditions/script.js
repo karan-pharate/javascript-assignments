@@ -1,4 +1,16 @@
 var day;
+
+function myFunction() {
+    var hour = new Date().getHours();
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good Day";
+    }
+    else { 
+        greeting = "Good Evening";  
+    }
+    document.getElementById("demo1").innerHTML = greeting;
+}
 switch(new Date().getDay()) {
     case 0:
         day = "Sunday";
