@@ -27,3 +27,15 @@ document.getElementById("demo7").innerHTML =
   "<br>" +
   "5" / "2" +
   "<br>";
+  let g1 = 'global 1'
+  let g2 = 'global 2'
+  {   /* Creating a new block scope */
+    g1 = 'new global 1'
+    let g2 = 'local global 2'
+    console.log(g1)   // 'new global 1'
+    console.log(g2)   // 'local global 2'
+    console.log(g3)   // ReferenceError: g3 is not defined
+    let g3 = 'I am not hoisted';
+  }
+  console.log(g1)    // 'new global 1'
+  console.log(g2)    // 'global 2'
