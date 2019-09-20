@@ -6,3 +6,5 @@ var myVar = setInterval(function myTimer() {
 function myStopFunction() {
   clearInterval(myVar);
 }
+var myVar1 = setTimeout (function greet() {
+document.getElementById('demo1').innerHTML = "Welcome";},3000);
