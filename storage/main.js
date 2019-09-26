@@ -1,4 +1,4 @@
-var myObj = {
+let myObj = {
   firstName: "Karan",
   lastName: "Pharate"
 };
@@ -9,8 +9,8 @@ class Cookie {
 
   get(key) {
     var allCookieArray = document.cookie.split("; ");
-    for (var i = 0; i < allCookieArray.length; i++) {
-      var temp = allCookieArray[i].split("=");
+    for (let i = 0; i < allCookieArray.length; i++) {
+      let temp = allCookieArray[i].split("=");
       if (temp.indexOf(key) == 0) return temp[1];
     }
     return "";

@@ -1,15 +1,15 @@
-var day;
+let day;
 
-function myFunction() {
-  var hour = new Date().getHours();
-  var greeting;
+myFunction = () => {
+  let hour = new Date().getHours(),
+    greeting;
   if (hour < 18) {
     greeting = "Good Day";
   } else {
     greeting = "Good Evening";
   }
   document.getElementById("demo1").innerHTML = greeting;
-}
+};
 switch (new Date().getDay()) {
   case 0:
     day = "Sunday";
